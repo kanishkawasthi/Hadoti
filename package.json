@@ -1,0 +1,10 @@
+{
+  "name": "kanishk-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kanishk Awasthi personal portfolio",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  }
+}

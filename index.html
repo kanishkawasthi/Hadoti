@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanishk Awasthi | Computer Science Student & Web Developer</title>
+
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Personal portfolio of Kanishk Awasthi — Computer Science & Engineering undergrad at LPU, Web Developer, Problem Solver, and Aspiring Entrepreneur. Explore projects, skills, and background.">
+  <meta name="keywords" content="Kanishk Awasthi, Portfolio, Web Developer, Computer Science, LPU, C++, Python, JavaScript, React.js, Node.js, Express.js, MongoDB, Punjab India">
+  <meta name="author" content="Kanishk Awasthi">
+
+  <!-- OpenGraph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kanishk Awasthi | Personal Portfolio">
+  <meta property="og:description" content="B.Tech CSE Student, Web Developer, and Aspiring Entrepreneur. View projects, technical skills, and background.">
+  <meta property="og:url" content="https://github.com/kanishkawasthi">
+  <meta property="og:image" content="assets/favicon.svg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kanishk Awasthi | Personal Portfolio">
+  <meta name="twitter:description" content="Computer Science & Engineering Student & Web Developer based in Punjab, India.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- FontAwesome 6 & DevIcons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="dark-theme">
+
+  <!-- PRELOADER -->
+  <div id="preloader" aria-label="Loading Page">
+    <div class="loader-ring"></div>
+    <div class="loader-text">&lt;KANISHK /&gt;</div>
+  </div>
+
+  <!-- CUSTOM CURSOR (Desktop Fine Pointer Only) -->
+  <div id="custom-cursor" class="custom-cursor"></div>
+  <div id="cursor-follower" class="cursor-follower"></div>
+
+  <!-- STICKY NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Kanishk Awasthi Home">
+        <span class="brand-badge">&lt;KA/&gt;</span>
+        <span>Kanishk</span>
+      </a>
+
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#training" class="nav-link">Training</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Dark / Light Mode">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Toggle Navigation Drawer">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT WRAPPER -->
+  <main>
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <canvas id="hero-canvas"></canvas>
+
+      <div class="container hero-content">
+        <div class="hero-badge reveal-element">
+          <span class="pulse-dot"></span>
+          <span>Open for Projects & Collaboration</span>
+        </div>
+
+        <h1 class="hero-title reveal-element delay-1">
+          Hi, I'm <span id="hero-name" class="gradient-text">Kanishk Awasthi</span>
+        </h1>
+
+        <div class="typing-container reveal-element delay-2">
+          I am a <span id="typing-text" class="typing-text"></span>
+        </div>
+
+        <p id="hero-description" class="hero-description reveal-element delay-3">
+          Computer Science & Engineering student at Lovely Professional University building interactive web applications and software solutions with modern tech stacks.
+        </p>
+
+        <div class="hero-ctas reveal-element delay-4">
+          <a href="#projects" class="btn btn-primary magnetic-btn">
+            <i class="fas fa-rocket"></i> View Projects
+          </a>
+          <!-- Replace assets/resume.pdf with your real resume file when deploying -->
+          <a id="hero-resume-btn" href="assets/resume.pdf" download="Kanishk_Awasthi_Resume.pdf" class="btn btn-secondary magnetic-btn">
+            <i class="fas fa-file-download"></i> Download Resume
+          </a>
+        </div>
+
+        <div id="social-row" class="social-links-row reveal-element delay-4">
+          <!-- Populated dynamically via js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT ME SECTION -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header reveal-element">
+          <span class="section-tag"><i class="fas fa-user"></i> GET TO KNOW ME</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">Passionate CSE undergraduate bridging technology, problem-solving, and entrepreneurial vision.</p>
+        </div>
+
+        <div class="about-grid">
+          <div id="about-bio" class="glass-card about-bio-card reveal-left">
+            <!-- Populated dynamically via js/data.js -->
+          </div>
+
+          <div id="stats-container" class="stats-grid reveal-right">
+            <!-- Populated dynamically via js/data.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SKILLS SECTION -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header reveal-element">
+          <span class="section-tag"><i class="fas fa-laptop-code"></i> TECH STACK</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+          <p class="section-subtitle">Core programming languages, web technologies, developer tools, and interpersonal strengths.</p>
+        </div>
+
+        <div class="skills-wrapper">
+          <!-- Languages -->
+          <div class="glass-card skill-category-card reveal-element">
+            <h3 class="category-title"><i class="fas fa-code"></i> Languages</h3>
+            <div id="languages-list" class="skill-list"></div>
+          </div>
+
+          <!-- Web Frameworks -->
+          <div class="glass-card skill-category-card reveal-element delay-1">
+            <h3 class="category-title"><i class="fas fa-globe"></i> Web Development</h3>
+            <div id="web-list" class="skill-list"></div>
+          </div>
+
+          <!-- Tools & Platforms -->
+          <div class="glass-card skill-category-card reveal-element delay-2">
+            <h3 class="category-title"><i class="fas fa-tools"></i> Tools & Platforms</h3>
+            <div id="tools-list" class="skill-list"></div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="glass-card skill-category-card reveal-element delay-3">
+            <h3 class="category-title"><i class="fas fa-brain"></i> Professional Strengths</h3>
+            <div id="soft-skills-list" class="soft-skills-grid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PROJECTS SECTION -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header reveal-element">
+          <span class="section-tag"><i class="fas fa-folder-open"></i> PORTFOLIO WORK</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Real-world applications, DSA software systems, and upcoming developments.</p>
+        </div>
+
+        <div id="projects-container" class="projects-grid">
+          <!-- Populated dynamically via js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TRAINING SECTION -->
+    <section id="training">
+      <div class="container">
+        <div class="section-header reveal-element">
+          <span class="section-tag"><i class="fas fa-code-branch"></i> PRACTICAL EXPERTISE</span>
+          <h2 class="section-title">Summer <span class="gradient-text">Training</span></h2>
+          <p class="section-subtitle">Hands-on technical training in core C++ and Data Structures & Algorithms.</p>
+        </div>
+
+        <div id="training-container">
+          <!-- Populated dynamically via js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. EDUCATION SECTION -->
+    <section id="education">
+      <div class="container">
+        <div class="section-header reveal-element">
+          <span class="section-tag"><i class="fas fa-graduation-cap"></i> ACADEMIC PATH</span>
+          <h2 class="section-title">Education <span class="gradient-text">Timeline</span></h2>
+          <p class="section-subtitle">Academic background and qualifications.</p>
+        </div>
+
+        <div id="education-container" class="timeline-container">
+          <!-- Populated dynamically via js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CERTIFICATIONS SECTION -->
+    <section id="certifications">
+      <div class="container">
+        <div class="section-header reveal-element">
+          <span class="section-tag"><i class="fas fa-certificate"></i> CREDENTIALS</span>
+          <h2 class="section-title">Certifications & <span class="gradient-text">Courses</span></h2>
+          <p class="section-subtitle">Specialized training programs, technical credentials, and course certifications.</p>
+        </div>
+
+        <div id="certs-container" class="certifications-grid">
+          <!-- Populated dynamically via js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CONTACT SECTION -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header reveal-element">
+          <span class="section-tag"><i class="fas fa-paper-plane"></i> LET'S CONNECT</span>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">Have a project idea, opportunity, or question? Send a message below!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-column reveal-left">
+            <a href="mailto:kanishkavasthi@gmail.com" class="glass-card contact-card-item">
+              <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-card-detail">
+                <h4>Email</h4>
+                <p>kanishkavasthi@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="tel:+918209146971" class="glass-card contact-card-item">
+              <div class="contact-card-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="contact-card-detail">
+                <h4>Phone</h4>
+                <p>+91-8209146971</p>
+              </div>
+            </a>
+
+            <a href="https://github.com/kanishkawasthi" target="_blank" rel="noopener" class="glass-card contact-card-item">
+              <div class="contact-card-icon"><i class="fab fa-github"></i></div>
+              <div class="contact-card-detail">
+                <h4>GitHub</h4>
+                <p>github.com/kanishkawasthi</p>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/kanishk-awasthi" target="_blank" rel="noopener" class="glass-card contact-card-item">
+              <div class="contact-card-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div class="contact-card-detail">
+                <h4>LinkedIn</h4>
+                <p>linkedin.com/in/kanishk-awasthi</p>
+              </div>
+            </a>
+
+            <div class="location-box">
+              <div class="location-header"><i class="fas fa-map-marker-alt"></i> Location</div>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">Phagwara, Punjab, India (LPU)</p>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="glass-card contact-form-card reveal-right">
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Johnson" required aria-describedby="contact-name-error">
+                <span id="contact-name-error" class="form-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Your Email</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="e.g. alex@example.com" required aria-describedby="contact-email-error">
+                <span id="contact-email-error" class="form-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Your Message</label>
+                <textarea id="contact-message" class="form-textarea" placeholder="Hello Kanishk, I'd like to discuss..." required aria-describedby="contact-message-error"></textarea>
+                <span id="contact-message-error" class="form-error" role="alert"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary magnetic-btn" style="width: 100%;">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+              <p class="direct-email-fallback">Or <a href="mailto:kanishkavasthi@gmail.com">email me directly at kanishkavasthi@gmail.com</a>.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-copy">
+        &copy; 2026 Kanishk Awasthi. Built with HTML, CSS & Vanilla JS.
+      </div>
+
+      <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
