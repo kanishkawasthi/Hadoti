@@ -960,9 +960,9 @@ function initScrollTriggerReveals() {
   // Summer Training Cards
   const trainingCards = gsap.utils.toArray('#training-container .glass-card');
   if (trainingCards.length > 0) {
+    gsap.set(trainingCards, { opacity: 1 });
     gsap.from(trainingCards, {
       y: 50,
-      opacity: 0,
       duration: 0.9,
       stagger: 0.15,
       ease: 'power3.out',
