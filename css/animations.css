@@ -28,6 +28,31 @@
   50% { box-shadow: 0 0 30px rgba(0, 242, 254, 0.5); }
 }
 
+@keyframes photoEntrance {
+  from { opacity: 0; transform: translate3d(var(--photo-shift-x), var(--photo-shift-y), 0) scale(0.8) rotateX(var(--photo-rotate-x, 0deg)) rotateY(var(--photo-rotate-y, 0deg)); }
+  to { opacity: 1; transform: translate3d(var(--photo-shift-x), var(--photo-shift-y), 0) scale(1) rotateX(var(--photo-rotate-x, 0deg)) rotateY(var(--photo-rotate-y, 0deg)); }
+}
+
+@keyframes photoAuraBreath {
+  0%, 100% { transform: translate3d(calc(var(--photo-shift-x) * -0.45), calc(var(--photo-shift-y) * -0.45), 0) rotate(0deg) scale(0.96); }
+  50% { transform: translate3d(calc(var(--photo-shift-x) * -0.45), calc(var(--photo-shift-y) * -0.45), 0) rotate(14deg) scale(1.06); }
+}
+
+@keyframes photoParticleFloat {
+  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.7; }
+  50% { transform: translate3d(8px, -14px, 0); opacity: 1; }
+}
+
+@keyframes photoOrbitOne {
+  from { transform: rotate(24deg) scaleY(0.42); }
+  to { transform: rotate(384deg) scaleY(0.42); }
+}
+
+@keyframes photoOrbitTwo {
+  from { transform: rotate(-36deg) scaleY(0.34); }
+  to { transform: rotate(-396deg) scaleY(0.34); }
+}
+
 /* Scroll Reveal Classes (IntersectionObserver) */
 .reveal-element {
   opacity: 0;

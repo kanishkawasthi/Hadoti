@@ -18,7 +18,7 @@ const PORTFOLIO_DATA = {
     ],
     email: "kanishkavasthi@gmail.com",
     phone: "+91-8209146971",
-    linkedin: "https://www.linkedin.com/in/kanishk-awasthi",
+    linkedin: "https://www.linkedin.com/in/kanishk-avasthi",
     github: "https://github.com/kanishkawasthi",
     location: "Phagwara, Punjab, India",
     bio: "I am a Computer Science & Engineering undergraduate at Lovely Professional University with hands-on experience in full-stack web development (React.js, Node.js, Express.js, MongoDB), algorithm design, and core software structures (C++, Python, Java). Interested in building real-world solutions and exploring entrepreneurial ventures.",

@@ -32,8 +32,9 @@
   <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/video-bg.css">
 </head>
-<body class="dark-theme">
+<body>
 
   <!-- PRELOADER -->
   <div id="preloader" aria-label="Loading Page">
@@ -47,18 +48,19 @@
 
   <!-- STICKY NAVBAR -->
   <header class="navbar">
+    <div id="scroll-progress" class="scroll-progress-bar"></div>
     <div class="container nav-container">
       <a href="#hero" class="nav-brand" aria-label="Kanishk Awasthi Home">
         <span class="brand-badge">&lt;KA/&gt;</span>
-        <span>Kanishk</span>
+        <span>Kanishk Awasthi</span>
       </a>
 
       <ul id="nav-links" class="nav-links">
         <li><a href="#hero" class="nav-link active">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#training" class="nav-link">Training</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#training" class="nav-link">Experience</a></li>
         <li><a href="#education" class="nav-link">Education</a></li>
         <li><a href="#certifications" class="nav-link">Certifications</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -80,43 +82,72 @@
 
     <!-- 1. HERO SECTION -->
     <section id="hero" class="hero-section">
-      <canvas id="hero-canvas"></canvas>
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <div class="hero-badge reveal-element">
+            <span class="pulse-dot"></span>
+            <span>COMPUTER SCIENCE × WEB DEVELOPMENT</span>
+          </div>
 
-      <div class="container hero-content">
-        <div class="hero-badge reveal-element">
-          <span class="pulse-dot"></span>
-          <span>Open for Projects & Collaboration</span>
+          <h1 id="hero-name" class="hero-title reveal-element delay-1">
+            Kanishk Awasthi
+          </h1>
+
+          <div class="typing-container reveal-element delay-2">
+            <span id="typing-text" class="typing-text"></span>
+          </div>
+
+          <p id="hero-description" class="hero-description reveal-element delay-3">
+            Building digital experiences with code, creativity and problem solving. Computer Science & Engineering student at Lovely Professional University.
+          </p>
+
+          <div class="hero-ctas reveal-element delay-4">
+            <a href="#projects" class="btn btn-primary magnetic-btn">
+              Explore Projects <i class="fas fa-arrow-right"></i>
+            </a>
+            <a id="hero-resume-btn" href="assets/resume.pdf" download="Kanishk_Awasthi_Resume.pdf" class="btn btn-secondary magnetic-btn">
+              View Resume <i class="fas fa-file-download"></i>
+            </a>
+          </div>
+
+          <div id="social-row" class="social-links-row reveal-element delay-4">
+            <!-- Populated dynamically via js/data.js -->
+          </div>
         </div>
 
-        <h1 class="hero-title reveal-element delay-1">
-          Hi, I'm <span id="hero-name" class="gradient-text">Kanishk Awasthi</span>
-        </h1>
-
-        <div class="typing-container reveal-element delay-2">
-          I am a <span id="typing-text" class="typing-text"></span>
-        </div>
-
-        <p id="hero-description" class="hero-description reveal-element delay-3">
-          Computer Science & Engineering student at Lovely Professional University building interactive web applications and software solutions with modern tech stacks.
-        </p>
-
-        <div class="hero-ctas reveal-element delay-4">
-          <a href="#projects" class="btn btn-primary magnetic-btn">
-            <i class="fas fa-rocket"></i> View Projects
-          </a>
-          <!-- Replace assets/resume.pdf with your real resume file when deploying -->
-          <a id="hero-resume-btn" href="assets/resume.pdf" download="Kanishk_Awasthi_Resume.pdf" class="btn btn-secondary magnetic-btn">
-            <i class="fas fa-file-download"></i> Download Resume
-          </a>
-        </div>
-
-        <div id="social-row" class="social-links-row reveal-element delay-4">
-          <!-- Populated dynamically via js/data.js -->
+        <div class="hero-photo-module reveal-photo" aria-label="Portrait of Kanishk Awasthi">
+          <div class="photo-frame">
+            <img src="assets/linkedin%20photo.jpeg" data-fallback-src="assets/profile.png" alt="Kanishk Awasthi">
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 2. ABOUT ME SECTION -->
+    <!-- 2. CINEMATIC STORYTELLING VIDEO SECTION -->
+    <section id="cinematic-story" style="padding: 4rem 0;">
+      <div class="container">
+        <div class="section-header reveal-element" style="margin-bottom: 2rem;">
+          <span class="section-tag"><i class="fas fa-play"></i> BEYOND THE INTERFACE</span>
+          <h2 class="section-title">Software, Systems & <span class="gradient-text">Real-World Projects</span></h2>
+          <p class="section-subtitle">Exploring technology through full-stack development, algorithms, and entrepreneurial engineering.</p>
+        </div>
+
+        <div class="cinematic-video-wrapper reveal-element">
+          <video class="cinematic-video-element" autoplay loop muted playsinline poster="assets/video/poster1.svg">
+            <source src="assets/video/animation1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="cinematic-video-overlay">
+            <div>
+              <span style="font-size: 0.85rem; font-family: var(--font-code); text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85;">Engineering Portfolio</span>
+              <h3 style="font-size: 1.5rem; font-weight: 700; margin-top: 0.2rem; color: #ffffff;">Crafted with Precision & Algorithms</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ABOUT ME SECTION -->
     <section id="about">
       <div class="container">
         <div class="section-header reveal-element">
@@ -138,7 +169,7 @@
     </section>
 
     <!-- 3. SKILLS SECTION -->
-    <section id="skills">
+    <section id="skills" class="section-video" data-video="assets/video/animation1.mp4" data-poster="assets/video/poster1.svg">
       <div class="container">
         <div class="section-header reveal-element">
           <span class="section-tag"><i class="fas fa-laptop-code"></i> TECH STACK</span>
@@ -175,7 +206,7 @@
     </section>
 
     <!-- 4. PROJECTS SECTION -->
-    <section id="projects">
+    <section id="projects" class="section-video" data-video="assets/video/animation2.mp4" data-poster="assets/video/poster2.svg">
       <div class="container">
         <div class="section-header reveal-element">
           <span class="section-tag"><i class="fas fa-folder-open"></i> PORTFOLIO WORK</span>
@@ -235,7 +266,7 @@
     </section>
 
     <!-- 8. CONTACT SECTION -->
-    <section id="contact">
+    <section id="contact" class="section-video" data-video="assets/video/animation2.mp4" data-poster="assets/video/poster2.svg">
       <div class="container">
         <div class="section-header reveal-element">
           <span class="section-tag"><i class="fas fa-paper-plane"></i> LET'S CONNECT</span>
@@ -270,11 +301,11 @@
               </div>
             </a>
 
-            <a href="https://www.linkedin.com/in/kanishk-awasthi" target="_blank" rel="noopener" class="glass-card contact-card-item">
+            <a href="https://www.linkedin.com/in/kanishk-avasthi" target="_blank" rel="noopener noreferrer" class="glass-card contact-card-item">
               <div class="contact-card-icon"><i class="fab fa-linkedin-in"></i></div>
               <div class="contact-card-detail">
                 <h4>LinkedIn</h4>
-                <p>linkedin.com/in/kanishk-awasthi</p>
+                <p>linkedin.com/in/kanishk-avasthi</p>
               </div>
             </a>
 
@@ -324,6 +355,11 @@
         &copy; 2026 Kanishk Awasthi. Built with HTML, CSS & Vanilla JS.
       </div>
 
+      <a class="footer-linkedin" href="https://www.linkedin.com/in/kanishk-avasthi" target="_blank" rel="noopener noreferrer" aria-label="Open Kanishk Awasthi on LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+        <span>LinkedIn</span>
+      </a>
+
       <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
       </button>
@@ -331,8 +367,13 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/data.js"></script>
+  <script src="js/data.js?v=20260923"></script>
+  <!-- GSAP 3 & Plugins CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
   <script src="js/particles.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/video-bg.js"></script>
+  <script src="js/main.js?v=20260923"></script>
 </body>
 </html>
