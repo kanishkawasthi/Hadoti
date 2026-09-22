@@ -860,24 +860,27 @@ function initScrollTriggerReveals() {
   // About Section & Bio Card
   const aboutBio = document.getElementById('about-bio');
   if (aboutBio) {
-    gsap.from(aboutBio, {
-      x: -50,
-      opacity: 0,
-      duration: 0.9,
+    gsap.fromTo(aboutBio,
+      { x: -50, opacity: 1 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 0.9,
       ease: 'power3.out',
       scrollTrigger: {
         trigger: aboutBio,
         start: 'top 85%'
       }
-    });
+      }
+    );
   }
 
   // Stats Grid & Counter Roll-up Animation
   const statCards = gsap.utils.toArray('.stat-card');
   if (statCards.length > 0) {
+    gsap.set(statCards, { opacity: 1 });
     gsap.from(statCards, {
       y: 45,
-      opacity: 0,
       scale: 0.92,
       duration: 0.8,
       stagger: 0.12,
@@ -988,9 +991,9 @@ function initScrollTriggerReveals() {
   // Certifications Cards
   const certCards = gsap.utils.toArray('.cert-card');
   if (certCards.length > 0) {
+    gsap.set(certCards, { opacity: 1 });
     gsap.from(certCards, {
       y: 45,
-      opacity: 0,
       scale: 0.92,
       duration: 0.8,
       stagger: 0.12,
